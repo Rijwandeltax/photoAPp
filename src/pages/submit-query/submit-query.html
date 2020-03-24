@@ -1,0 +1,136 @@
+<!--
+  Generated template for the TestimonialPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Submit Query</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="bg">
+
+       
+         <ion-card padding>
+                   <form [formGroup]="form" (ngSubmit)="saveEntry()">
+                       
+                      <ion-list>
+                        <ion-item>
+                          <i class="material-icons" style="color:#f4f4f4;margin-top:15px" item-start>account_circle</i>
+                            <mat-form-field>
+                                <input matInput placeholder="Name" formControlName="name" [(ngModel)]="name">
+                            </mat-form-field>
+                        </ion-item>
+                        <ion-item>
+                            <i class="material-icons" style="color:#f4f4f4;margin-top:15px">call</i>
+                              <mat-form-field>
+                                  <input matInput placeholder="Mobile Number" formControlName="mobile" [(ngModel)]="mobile">
+                              </mat-form-field>
+                          </ion-item>
+                          <ion-item>
+                              <i class="material-icons" style="color:#f4f4f4;margin-top:15px">email</i>
+                              <mat-form-field>
+                                  <input matInput placeholder="Enter your email" formControlName="email" [(ngModel)]="email" >
+                                 <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>-->
+                                </mat-form-field>
+                           </ion-item>
+                           <ion-item>
+                              <i class="material-icons" style="color:#f4f4f4;margin-top:15px">question_answer</i>
+                              <mat-form-field>
+                                  <mat-select placeholder="Choose an option" [(ngModel)]="typeo" formControlName="typeo">
+                                    <mat-option value="option1">Option 1</mat-option>
+                                    <mat-option value="option2">Option 2</mat-option>
+                                    <mat-option value="option3">Option 3</mat-option>
+                                  </mat-select>
+                                </mat-form-field>
+                           </ion-item>
+                           <ion-item>
+                              <i class="material-icons" style="color:#f4f4f4;margin-top:15px">question_answer</i>
+                              <mat-form-field>
+                                  <textarea matInput placeholder="Textarea" formControlName="message" [(ngModel)]="message"></textarea>
+                              </mat-form-field>
+                          </ion-item>
+                           <div padding>
+                              <button ion-button  block style="color:#f4f4f4;" [disabled]="!form.valid">Sign In</button>
+                            </div>
+                           
+                       
+                        </ion-list>
+                       
+                      </form>
+                             
+                    </ion-card>
+
+
+
+
+
+
+ <!-- <ion-card padding>
+  <ion-list>
+   <form [formGroup]="form" (ngSubmit)="saveEntry()">
+     <ion-item style="margin-bottom:-30px">
+        <ion-row>
+          <ion-col col-2><i class="material-icons" style="color:#f4f4f4;margin-top:23px">account_circle</i></ion-col>
+          <ion-col col-10>
+              <mat-form-field>
+                <input matInput placeholder="Name" formControlName="name" [(ngModel)]="name">
+              </mat-form-field>
+              </ion-col>
+          </ion-row>
+          </ion-item>
+      
+          <ion-item style="margin-bottom:-30px">
+              <ion-row>
+                <ion-col col-2><i class="material-icons" style="color:#f4f4f4;margin-top:23px">call</i></ion-col>
+                <ion-col col-10> 
+                  <mat-form-field>
+                     <input matInput placeholder="Mobile Number">
+                 </mat-form-field>
+                </ion-col>
+              </ion-row>
+          </ion-item>
+          <ion-item style="margin-bottom:-30px">
+            <ion-row style="padding:0px;margin:0px">
+              <ion-col col-2><i class="material-icons" style="color:#f4f4f4;margin-top:23px">email</i></ion-col>
+              <ion-col col-10>
+                <mat-form-field>
+                  <input matInput placeholder="Enter your email" [formControl]="email" required>
+                  <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+                  </ion-col>
+              </ion-row>
+          </ion-item>
+        <ion-item style="margin-bottom:-30px">
+          <ion-row>
+            <ion-col col-2><i class="material-icons" style="color:#f4f4f4;margin-top:23px">question_answer</i></ion-col>
+            <ion-col col-10> <mat-form-field>
+              <mat-select placeholder="Type of Query">
+                <mat-option *ngFor="let food of foods" [value]="food.value">
+                  {{ food.viewValue }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field></ion-col>
+          </ion-row>
+      </ion-item>
+      </form>
+      
+        </ion-list>
+      
+        <div padding>
+          <button ion-button  block style="color:#f4f4f4;">Sign In</button>
+        </div>
+       
+  </ion-card>-->
+
+ 
+
+
+ 
+</ion-content>

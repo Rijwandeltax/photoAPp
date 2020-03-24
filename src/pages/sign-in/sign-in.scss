@@ -1,0 +1,29 @@
+page-sign-in {
+    .item-md{
+        background-color: transparent;
+    }
+    .list-md .item-input:last-child{
+        border: 0px;
+    }
+    .item-md.item-input.item-input-has-focus .item-inner,
+.item-md.item-input.input-has-focus .item-inner {
+  border-bottom-color: #e8ebf1;
+  -webkit-box-shadow: inset 0 -1px 0 0 #f7faff;
+  box-shadow: inset 0 -1px 0 0 #babbbe;
+}
+.list-md .item-input.item-input-has-focus:last-child,
+.list-md .item-input.input-has-focus:last-child {
+    border-bottom-color: #e8ebf1;
+    -webkit-box-shadow: inset 0 -1px 0 0 #f7faff;
+    box-shadow: inset 0 -1px 0 0 #babbbe;
+}
+.card-md p{
+    color:#f4f4f4;
+}
+.mat-form-field-underline{
+    background-color: #f4f4f4;
+}
+.mat-focused{
+    border-bottom:white;
+}
+}

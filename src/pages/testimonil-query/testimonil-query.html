@@ -1,0 +1,73 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Testimonil Query</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  
+  <ion-content class="bg">
+  
+         
+           <ion-card padding>
+                     <form [formGroup]="form">
+                         
+                        <ion-list>
+                        
+                          <ion-item>
+                            <i class="material-icons" style="color:#f4f4f4;margin-top:15px" item-start>account_circle</i>
+                              <mat-form-field>
+                                  <input matInput placeholder="Name" formControlName="name" [(ngModel)]="name">
+                              </mat-form-field>
+                          </ion-item>
+                          <ion-item>
+                              <i class="material-icons" style="color:#f4f4f4;margin-top:15px" item-start>location_on</i>
+                                <mat-form-field>
+                                    <input matInput placeholder="City" formControlName="city" [(ngModel)]="city">
+                                </mat-form-field>
+                            </ion-item>
+                            <ion-item>
+                                <i class="material-icons" style="color:#f4f4f4;margin-top:15px" item-start>work</i>
+                                <mat-form-field>
+                                    <input matInput placeholder="Enter your Profession" formControlName="profession" [(ngModel)]="profession" >
+                                   <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>-->
+                                  </mat-form-field>
+                             </ion-item>
+                             <ion-item>
+                                <i class="material-icons" style="color:#f4f4f4;margin-top:15px" item-start>star</i>
+                                <mat-form-field>
+                                    <mat-select placeholder="Give a Rating" [(ngModel)]="rating" formControlName="rating">
+                                      <mat-option value="1">1</mat-option>
+                                      <mat-option value="2">2</mat-option>
+                                      <mat-option value="3">3</mat-option>
+                                      <mat-option value="4">4</mat-option>
+                                      <mat-option value="5">5</mat-option>
+                                    </mat-select>
+                                  </mat-form-field>
+                             </ion-item>
+                             <ion-item>
+                                <i class="material-icons" style="color:#f4f4f4;margin-top:15px" item-start>feedback</i>
+                                <mat-form-field>
+                                    <textarea matInput placeholder="Textarea" formControlName="message" [(ngModel)]="message"></textarea>
+                                </mat-form-field>
+                            </ion-item>
+                            <ion-item>
+                                <p>{{imageURI}}</p>
+                                <button ion-button style="color:white" (click)="getImage()" >Get Image</button>
+                            </ion-item>
+                             <div padding>
+                                <button ion-button  block style="color:#f4f4f4;" [disabled]="!form.valid" (click)="saveEntry()">Sign In</button>
+                              </div>
+                             
+                         
+                          </ion-list>
+                         
+                        </form>
+                               
+                      </ion-card>
+  
+
+  </ion-content>
+  

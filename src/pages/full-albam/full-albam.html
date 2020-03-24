@@ -1,0 +1,16 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Full Image Gallery</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="bg">
+    <ion-slides pager="true">
+        <ion-slide *ngFor="let slide of delta">
+          <img [src]="slide.ImageUrl">
+        </ion-slide>
+      </ion-slides>
+</ion-content>

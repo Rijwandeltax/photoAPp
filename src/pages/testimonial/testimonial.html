@@ -1,0 +1,89 @@
+<!--
+  Generated template for the TestimonialPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Testimonial</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content class="bg">
+    <ion-card padding>
+        <ion-list>
+       <ion-item style="margin-bottom:-30px">
+          <ion-row>
+            <ion-col col-1><ion-icon name="person" item-start style="color:#f4f4f4;margin-top:23px"></ion-icon></ion-col>
+            <ion-col col-11>
+                <mat-form-field>
+                  <input matInput placeholder="Username">
+                </mat-form-field>
+                </ion-col>
+            </ion-row>
+            </ion-item>
+        
+            <ion-item style="margin-bottom:-30px">
+                <ion-row>
+                  <ion-col col-1><ion-icon name="key" item-start style="color:#f4f4f4;margin-top:23px"></ion-icon></ion-col>
+                  <ion-col col-11> <mat-form-field>
+                    <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'">
+                    <mat-icon style="font-size:100%" matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                  </mat-form-field></ion-col>
+                </ion-row>
+            </ion-item>
+            <ion-item style="margin-bottom:-30px">
+              <ion-row>
+                <ion-col col-1><ion-icon name="person" item-start style="color:#f4f4f4;margin-top:23px"></ion-icon></ion-col>
+                <ion-col col-11>
+                  <mat-form-field>
+                    <input matInput placeholder="Enter your email" [formControl]="email" required>
+                    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                  </mat-form-field>
+                    </ion-col>
+                </ion-row>
+            </ion-item>
+          <ion-item style="margin-bottom:-30px">
+            <ion-row>
+              <ion-col col-1><ion-icon name="key" item-start style="color:#f4f4f4;margin-top:23px"></ion-icon></ion-col>
+              <ion-col col-11> <mat-form-field>
+                <mat-select placeholder="Favorite food">
+                  <mat-option *ngFor="let food of foods" [value]="food.value">
+                    {{ food.viewValue }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field></ion-col>
+            </ion-row>
+        </ion-item>
+        
+          </ion-list>
+        
+          <div padding>
+            <button ion-button  block style="color:#f4f4f4;">Sign In</button>
+          </div>
+    </ion-card>
+
+    <ion-card padding>
+
+        <ion-row *ngFor="let item of delta">
+            <ion-col col-4 style="padding:0px;border: 2px solid white;border-radius: 5px;">
+              <img src="assets/imgs/men.jpg" style="height:100%">
+            </ion-col>
+            <ion-col col-8> 
+              <p style="font-size:16px">{{item.DisplayName}}</p>
+              <p style="font-size:12px"><i class="fa fa-quote-left"></i> {{item.Message}} <i class="fa fa-quote-right"></i></p>
+              
+              <p style="font-size:12px"><i class="material-icons" style="font-size:18px">star</i><i class="material-icons" style="font-size:18px">star</i><i class="material-icons" style="font-size:18px">star</i><i class="material-icons" style="font-size:18px">star_border</i><i class="material-icons" style="font-size:18px">star_border</i></p>
+            </ion-col>
+          </ion-row>
+
+    </ion-card>
+  
+
+   
+</ion-content>

@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Album</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="bg">
+    <ion-card *ngFor="let deltaa of delta" style="margin:0px;width:100%" class="bgf" (click)="openSlide(deltaa.AlbumId)">
+       <div class="myCard">
+            <img src="assets/imgs/nin-live.png">
+             <div class="myOverlay">
+                 <p class="card-subtitle" style="font-size:18px;margin-top:75px;text-align:center;color:#f4f4f4">{{deltaa.AlbumName}}</p>
+              </div>
+        </div>
+    </ion-card>  
+</ion-content>

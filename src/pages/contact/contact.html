@@ -1,0 +1,82 @@
+<!--
+  Generated template for the ContactPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Contact</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content class="bg" >
+<div *ngFor="let deltaa of delta">
+    <ion-list> 
+      <div  [innerHTML] = "googlemap"></div> 
+     
+    </ion-list>
+
+    <ion-list>
+        <ion-item style="border-bottom:3px">
+          <ion-row>
+          <ion-col  col-3><i class="fa fa-mobile fa-2x fa-fw" ></i></ion-col>
+          <ion-col  col-9> <h3 style="marign-top:8px!important">Give Us a Call</h3>
+           <h4 style="margin-top:5px"> <a mat-button [href]="'tel:' + deltaa.MobileNumber" style="color:rgb(255, 255, 255);text-decoration:none;font-size:14px">{{deltaa.MobileNumber}}</a></h4></ion-col>
+          </ion-row>
+          <div style="border:1px solid #f3d303;margin-left:30%;margin-right:45%"></div>
+        </ion-item>
+       
+        <ion-item>
+            <ion-row>
+            <ion-col  col-3><i class="fa fa-envelope-o fa-2x fa-fw" ></i></ion-col>
+            <ion-col  col-9> <h3 style="marign-top:8px!important">Send Us a Message</h3>
+              <h4 style="margin-top:5px"><a  mat-button [href]="'mailto:' + deltaa.EmailID" style="color:rgb(255, 255, 255);text-decoration:none;font-size:14px">{{deltaa.EmailID}}</a></h4></ion-col>
+            </ion-row>
+            <div style="border:1px solid #f3d303;margin-left:30%;margin-right:45%"></div>
+          </ion-item>
+          <ion-item>
+              <ion-row>
+              <ion-col  col-3><i class="fa fa-map-marker fa-2x fa-fw" ></i></ion-col>
+              <ion-col  col-9> <h3 style="marign-top:8px!important">Visit our location</h3>
+            
+                <h4 style="margin-top:5px"><span mat-button style="color:rgb(255, 255, 255);text-decoration:none;font-size:14px">{{deltaa.Add1}},{{deltaa.Add2}} {{deltaa.City}} {{deltaa.State}} {{deltaa.Country}}</span></h4></ion-col>
+              </ion-row>
+              <div style="border:1px solid #f3d303;margin-left:30%;margin-right:45%"></div>
+            </ion-item>
+           <ion-item>
+             <ion-row>
+                <a [href]="deltaa.TwitterUrl" mat-icon-button><span  class="fa-stack fa-lg" style="color:#ffffff">
+                    <i class="fa fa-square-o fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                  </span></a>
+                  <a [href]="deltaa.FacebookUrl" mat-icon-button>  <span  class="fa-stack fa-lg" style="color:#ffffff">
+                      <i class="fa fa-square-o fa-stack-2x"></i>
+                      <i class="fa fa-facebook fa-stack-1x"></i>
+                    </span></a>
+                    <a [href]="deltaa.InstagramUrl" mat-icon-button>   <span class="fa-stack fa-lg" style="color:#ffffff">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-instagram fa-stack-1x"></i>
+                      </span></a>
+                      <a [href]="deltaa.YoutubeUrl" mat-icon-button> <span class="fa-stack fa-lg" style="color:#ffffff">
+                          <i class="fa fa-square-o fa-stack-2x"></i>
+                          <i class="fa fa-youtube fa-stack-1x"></i>
+                        </span></a>
+                        <a [href]="deltaa.PinterestUrl" mat-icon-button>   <span class="fa-stack fa-lg" style="color:#ffffff">
+                            <i class="fa fa-square-o fa-stack-2x"></i>
+                            <i class="fa fa-pinterest fa-stack-1x"></i>
+                          </span></a>
+             </ion-row>
+           </ion-item>
+             
+             
+             
+                 
+               
+      </ion-list>
+    </div>
+</ion-content>

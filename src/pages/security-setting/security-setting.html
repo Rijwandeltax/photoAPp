@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Security Setting</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="bg">
+
+       
+  <ion-card padding *ngFor="let deltaa of delta">
+    <form [formGroup]="form" (ngSubmit)="saveEntry()">   
+       <ion-list>
+         <ion-item>
+           <i class="material-icons" style="color:#f4f4f4;margin-top:15px" item-start>account_circle</i>
+             <mat-form-field>
+                 <input matInput  placeholder="Name" formControlName="name" [(ngModel)]="deltaa.Name" readonly  >
+             </mat-form-field>
+         </ion-item>
+         <ion-item>
+             <i class="material-icons" style="color:#f4f4f4;margin-top:15px">call</i>
+               <mat-form-field>
+                   <input matInput placeholder="Mobile Number" formControlName="mobile" [(ngModel)]="deltaa.MobileNumber" readonly>
+               </mat-form-field>
+           </ion-item>
+           <ion-item>
+               <i class="material-icons" style="color:#f4f4f4;margin-top:15px">email</i>
+               <mat-form-field>
+                   <input matInput placeholder="Enter your email" formControlName="email" [(ngModel)]="deltaa.EmailId" >
+                  <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>-->
+                 </mat-form-field>
+            </ion-item>
+            <ion-item>
+              <i class="material-icons" style="color:#f4f4f4;margin-top:15px">lock</i>
+              <mat-form-field>
+                  <input matInput placeholder="Password" formControlName="password" [type]="hide ? 'password' : 'text'">
+                  <mat-icon style="font-size:100%" matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+              </mat-form-field>
+            </ion-item>
+            <ion-item>
+                <section class="example-section">
+                    <mat-checkbox class="example-margin" formControlName="checked" [(ngModel)]="checked">Change Password</mat-checkbox>
+                </section>
+            </ion-item>
+            <div padding>
+               <button ion-button  block style="color:#f4f4f4;" [disabled]="!form.valid">Sign In</button>
+             </div>
+          </ion-list>
+       </form>
+     </ion-card>
+</ion-content>

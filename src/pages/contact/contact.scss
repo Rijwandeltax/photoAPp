@@ -1,0 +1,18 @@
+page-contact {
+    .item-md{
+        background-color: transparent;
+    }
+    .list-md .item-block .item-inner{
+        border-bottom:0px solid #f93939;
+    }
+    h3{
+        color: rgb(255, 255, 255);
+    }
+    .mat-icon-button{
+        line-height: 52px;
+    }
+    .mat-button{
+        background-color: transparent;
+        padding: 0 6px;
+    }
+}

@@ -1,0 +1,71 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/HLBysyo0MQBO_7E-DWLwzg.woff2');
+  }
+  *{
+    font-family: 'Poppins';
+  }
+
+
+.bg1{
+    background:url(../assets/imgs/ma.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bg{
+    background:linear-gradient(rgba(140, 127, 127, 0.7), rgba(90, 81, 81, 0.7)),url(../assets/imgs/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.myCard{
+    position:relative;
+    background-color: darkcyan;
+  }
+  .list-md .item-block .item-inner{
+    border-bottom:1px solid #f93939;
+}
+  .myOverlay{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 99;
+      bottom: 0px;
+      opacity: 0.7;
+      background-color: #002a3e;
+      color: #fff;
+      padding: 7px; 
+  
+  }
+  .myOverlay .card-title{
+    font-size:18px;
+    font-weight:900
+  } 
+  .swiper-pagination-bullet-active{
+      background-color: #f2d303;
+  }
+  .list-md .item-block .item-inner{
+      border-bottom:0px;
+  }
+  .item-md,.item.activated{
+      background-color: transparent;
+      color: #f4f4f4;
+  }
+  
